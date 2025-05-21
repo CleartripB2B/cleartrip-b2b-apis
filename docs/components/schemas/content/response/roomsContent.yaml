@@ -1,0 +1,6 @@
+type: object
+properties:
+  rooms:
+    type: array
+    items:
+      $ref: './room.yaml'

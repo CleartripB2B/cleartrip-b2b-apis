@@ -1,0 +1,8 @@
+SearchByHotelIdRequest:
+  $ref: './search-by-hotelId/request/search-by-hotelId-request.yaml'
+
+SearchByLocationRequest:
+  $ref: './search-by-location/request/search-by-location-request.yaml'
+
+SearchResponse:
+  $ref: './shared/search-response.yaml' 

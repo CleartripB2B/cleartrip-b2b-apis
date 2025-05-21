@@ -1,0 +1,23 @@
+type: object
+properties:
+  searchId:
+    type: string
+    description: Use searchId provided in the response of details API.
+    example: abc123
+  bookingInfo:
+    $ref: './booking-info.yaml'
+  searchCriteria:
+    $ref: './search-criteria.yaml'
+  customerInfo:
+    $ref: './customer-info.yaml'
+  panCard:
+    $ref: './pan-card.yaml'
+  additionalInfo:
+    $ref: './additional-info.yaml'
+  taxEntityInformation:
+    $ref: './tax-entity-information.yaml'
+required:
+  - searchId
+  - bookingInfo
+  - searchCriteria
+  - customerInfo

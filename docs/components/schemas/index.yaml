@@ -1,0 +1,5 @@
+# Include schema indexes
+$ref: './common/index.yaml'
+$ref: './search/index.yaml'
+$ref: './booking/index.yaml'
+$ref: './content/index.yaml' 

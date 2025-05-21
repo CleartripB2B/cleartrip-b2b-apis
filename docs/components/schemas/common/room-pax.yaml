@@ -1,0 +1,15 @@
+type: object
+required:
+  - adults
+properties:
+  adults:
+    type: integer
+    format: int32
+    minimum: 1
+  childAges:
+    type: array
+    items:
+      type: integer
+      format: int32
+      minimum: 0
+      maximum: 11

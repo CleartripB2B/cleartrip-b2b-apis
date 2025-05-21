@@ -1,0 +1,24 @@
+type: object
+properties:
+  checkinTime:
+    type: string
+    description: Check-in time
+  checkoutTime:
+    type: string
+    description: Check-out time
+  guidelinesAndPolicies:
+    type: array
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the guidelines and policies
+        description:
+          type: array
+          items:
+            type: string
+          description: Description of the guidelines and policies
+      required:
+        - title
+        - description

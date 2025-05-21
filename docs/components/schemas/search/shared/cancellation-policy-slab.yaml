@@ -1,0 +1,17 @@
+type: object
+properties:
+  startTime:
+    type: integer
+    format: int64
+    example: 1747799181799
+    description: start timestamp in epoch
+  endTime:
+    type: integer
+    format: int64
+    example: 1748370600000
+    description: end timestamp in epoch
+  penaltyAmount:
+    type: number
+    format: double 
+    description: "Penalty amount for booking in this time period"
+    example: 250.4

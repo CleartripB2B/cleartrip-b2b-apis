@@ -1,0 +1,9 @@
+type: object
+description: Response object for Refund Info API.
+properties:
+  refundAmount:
+    type: string
+    description: Refund amount for the trip.
+    example: "2707.89"
+required:
+  - refundAmount

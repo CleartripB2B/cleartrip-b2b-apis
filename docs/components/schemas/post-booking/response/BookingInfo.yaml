@@ -1,0 +1,9 @@
+type: object
+description: Booking information.
+properties:
+  bookingStatus:
+    type: string
+    description: Status of the booking.
+  voucherNumber:
+    type: string
+    description: Voucher number issued.

@@ -1,0 +1,9 @@
+type: object
+properties:
+  hotels:
+    type: array
+    items:
+      $ref: './hotel-profile-response.yaml'
+    description: Array of hotel response objects
+required:
+  - hotels

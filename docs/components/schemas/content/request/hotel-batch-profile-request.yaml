@@ -1,0 +1,12 @@
+type: object
+description: Request schema for fetching hotel details by hotel IDs.
+properties:
+  hotelIds:
+    type: array
+    description: Provide the list of hotel ids. Max allowed batch size for hotelIds is 50.
+    items:
+      type: string
+    example:
+      - "707595"
+required:
+  - hotelIds

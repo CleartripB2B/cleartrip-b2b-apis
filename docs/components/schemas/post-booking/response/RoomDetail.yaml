@@ -1,0 +1,11 @@
+type: object
+description: Room details booked.
+properties:
+  roomTypeName:
+    type: string
+    description: Type name of the room.
+  roomName:
+    type: string
+    description: Name/Label of the room.
+  guests:
+    $ref: './Guests.yaml'

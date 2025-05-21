@@ -1,0 +1,15 @@
+type: object
+description: Payment details associated with the booking.
+properties:
+  paymentType:
+    type: string
+    description: Type of the payment.
+  amount:
+    type: string
+    description: Amount paid for the booking.
+  currency:
+    type: string
+    description: Currency of the payment.
+  status:
+    type: string
+    description: Status of the payment.

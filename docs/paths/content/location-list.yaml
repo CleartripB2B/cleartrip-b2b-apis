@@ -1,0 +1,56 @@
+post:
+  tags:
+    - Content APIs
+  description: |
+      This Content API provides detailed location hierarchy and metadata for a given locationType.
+
+      **Features:**  
+      - Retrieves location details along with hierarchical relationships.  
+      - Supports efficient pagination for large datasets.  
+      - Provides associated metadata for each location.
+
+  summary: Get Location List
+  operationId: getLocationList
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+    - in: query
+      name: locationType
+      schema:
+        type: string
+        enum: ["CITY", "STATE", "LOCALITY"]
+        default: "CITY"
+      required: false
+
+    - in: query
+      name: pageSize
+      schema:
+        type: integer
+        maximum: 1000
+        default: 100
+      description: |
+        Number of records to fetch in a page.
+      required: false
+
+    - in: query
+      name: nextPageToken
+      schema:
+        type: string
+      description: |
+        Page token received in the last page response.  
+        Mandatory only for fetching subsequent pages.
+      required: false
+
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/content/response/location-list-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

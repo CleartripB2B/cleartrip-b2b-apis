@@ -1,0 +1,5 @@
+description: Internal Server Error
+content:
+  application/hal+json:
+    schema:
+      $ref: './anveshak-error-response.yaml'

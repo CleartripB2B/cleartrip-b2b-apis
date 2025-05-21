@@ -1,0 +1,37 @@
+post:
+  tags:
+    - Content APIs
+  description: |
+      This API retrieves detailed profile information for a list of hotels based on the provided hotel IDs.
+
+      **Features:**  
+      - Fetches comprehensive details for multiple hotels.  
+      - Includes hotel policies, amenities, and other relevant information.  
+      - Supports batch retrieval of hotel profiles for efficient data access.
+
+      Ideal for scenarios where multiple hotel profiles need to be fetched in a single request.  
+
+  summary: Get Hotel Profile in Batch
+  operationId: getHotelProfileInBatch
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/content/request/hotel-batch-profile-request.yaml'
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/content/response/hotel-batch-profile-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

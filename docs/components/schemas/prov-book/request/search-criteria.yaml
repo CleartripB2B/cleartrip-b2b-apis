@@ -1,0 +1,23 @@
+type: object
+properties:
+  hotelId:
+    type: string
+    description: Hotel ID
+    example: "2178932"
+  checkInDate:
+    type: string
+    format: date
+    description: Check-in date in YYYY-MM-DD format
+    example: "2024-09-28"
+  checkOutDate:
+    type: string
+    format: date
+    description: Check-out date in YYYY-MM-DD format
+    example: "2024-09-29"
+  roomsData:
+    $ref: './rooms-data.yaml'
+required:
+  - hotelId
+  - checkInDate
+  - checkOutDate
+  - roomsData

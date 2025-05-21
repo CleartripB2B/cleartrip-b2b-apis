@@ -1,0 +1,77 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+    description: Unique identifier for the room
+  name:
+    type: string
+    description: Name of the room
+  description:
+    type: string
+    description: Description of the room
+  views:
+    type: array
+    items:
+      type: string
+    description: List of views available from the room
+  amenities:
+    type: array
+    items:
+      $ref: './amenity.yaml'
+  area:
+    type: object
+    properties:
+      value:
+        type: number
+        format: double
+        description: Area value
+      unit:
+        type: string
+        description: Unit of the area, e.g., sq.ft
+    required:
+      - value
+      - unit
+  media:
+    type: array
+    items:
+      $ref: './media.yaml'
+  bedGroups:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Unique identifier for the bed group
+        description:
+          type: string
+          description: Description of the bed group
+        quantity:
+          type: integer
+          format: int64
+          description: Quantity of beds in the group
+        type:
+          type: string
+          description: Type of bed group, e.g., KingBed
+      required:
+        - id
+        - type
+  maxOccupancy:
+    type: object
+    properties:
+      totalMaxOccupancy:
+        type: integer
+        description: Total maximum occupancy of the room
+      maxChildOccupancy:
+        type: integer
+        description: Maximum child occupancy of the room
+      maxAdultOccupancy:
+        type: integer
+        description: Maximum adult occupancy of the room
+    required:
+      - totalMaxOccupancy
+required:
+  - id
+  - name

@@ -1,0 +1,26 @@
+type: object
+properties:
+  url:
+    type: string
+    description: URL of the media
+  type:
+    type: string
+    description: Type of the media, e.g., PHOTO
+  featured:
+    type: boolean
+    description: Indicates if the media is featured
+  category:
+    type: string
+    description: Category of the media
+  subCategory:
+    type: string
+    description: Subcategory of the media
+  caption:
+    type: string
+    description: Caption for the media
+  thumbNailImagePath:
+    type: string
+    description: Thumbnail image path of the media
+required:
+  - url
+  - type

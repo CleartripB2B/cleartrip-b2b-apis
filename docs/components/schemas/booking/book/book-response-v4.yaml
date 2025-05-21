@@ -1,0 +1,13 @@
+type: object
+properties:
+  tripId:
+    type: string
+    description: "Trip ID created for the booking."
+    example: "240703457366"
+  confirmationNumber:
+    type: string
+    description: "Confirmation number (voucher number) for booking."
+    example: "131837194"
+required:
+  - tripId
+  - confirmationNumber

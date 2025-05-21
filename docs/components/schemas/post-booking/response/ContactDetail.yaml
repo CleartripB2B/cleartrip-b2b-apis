@@ -1,0 +1,21 @@
+type: object
+description: Contact information of the guest.
+properties:
+  title:
+    type: string
+    description: Title of the contact person.
+  firstName:
+    type: string
+    description: First name of the contact person.
+  lastName:
+    type: string
+    description: Last name of the contact person.
+  email:
+    type: string
+    description: Email of the contact person.
+  mobile:
+    type: string
+    description: Mobile number of the contact person.
+  landline:
+    type: string
+    description: Landline number of the contact person.

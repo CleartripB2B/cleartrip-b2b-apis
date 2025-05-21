@@ -1,0 +1,8 @@
+type: object
+properties:
+  provisionalBookId:
+    type: string
+    description: Unique id generated against the provisional book.
+    example: "111a8f26-ba5b-4228-a934-b6829c877426"
+required:
+  - provisionalBookId

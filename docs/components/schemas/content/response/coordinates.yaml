@@ -1,0 +1,13 @@
+type: object
+properties:
+  centerLatitude:
+    type: number
+    format: double
+    description: Latitude coordinate of the location.
+  centerLongitude:
+    type: number
+    format: double
+    description: Longitude coordinate of the location.
+required:
+  - centerLatitude
+  - centerLongitude

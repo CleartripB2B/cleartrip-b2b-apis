@@ -1,0 +1,90 @@
+type: object
+properties:
+  coordinates:
+    type: object
+    properties:
+      latitude:
+        type: number
+        format: double
+        description: Latitude coordinate of the location
+      longitude:
+        type: number
+        format: double
+        description: Longitude coordinate of the location
+    required:
+      - latitude
+      - longitude
+  pincode:
+    type: string
+    description: Pincode of the hotel location
+  country:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Unique identifier for the country
+      name:
+        type: string
+        description: Name of the country
+      code:
+        type: string
+        description: Country code
+    required:
+      - id
+      - name
+  city:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Unique identifier for the city
+      name:
+        type: string
+        description: Name of the city
+    required:
+      - id
+      - name
+  state:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Unique identifier for the state
+      name:
+        type: string
+        description: Name of the state
+    required:
+      - id
+      - name
+  area:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Unique identifier for the area
+      name:
+        type: string
+        description: Name of the area
+    required:
+      - id
+      - name
+  locality:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Unique identifier for the locality
+      name:
+        type: string
+        description: Name of the locality
+    required:
+      - id
+      - name
+required:
+  - country
+  - city

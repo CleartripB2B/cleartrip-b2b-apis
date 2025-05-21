@@ -1,0 +1,17 @@
+type: object
+properties:
+  adults:
+    type: integer
+    description: Number of adults in a room
+    example: 2
+    minimum: 1
+  childAges:
+    type: array
+    description: Children ages in a room
+    items:
+      type: integer
+      minimum: 0
+      maximum: 11
+    example: [5,6]
+required:
+  - adults

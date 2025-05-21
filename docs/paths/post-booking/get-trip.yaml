@@ -1,0 +1,35 @@
+get:
+  tags:
+    - Trip API
+  summary: Get Trip
+  operationId: getTrip
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+    - name: tripId
+      in: query
+      description: Trip ID associated with the trip for which the details will be fetched.
+      required: false
+      schema:
+        type: string
+        example: "234567890"
+    - name: affiliateTripReference
+      in: query
+      description: Affiliate trip reference associated with the trip for which the details will be fetched.
+      required: false
+      schema:
+        type: string
+        example: "20240623164511"
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/post-booking/response/get-trip-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

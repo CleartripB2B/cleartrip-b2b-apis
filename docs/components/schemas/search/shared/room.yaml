@@ -1,0 +1,10 @@
+type: object
+properties:
+  roomId:
+    type: string
+    description: Unique Identifier for the room.
+    example: "2492160"
+  rates:
+    type: array
+    items:
+      $ref: './rate.yaml' 

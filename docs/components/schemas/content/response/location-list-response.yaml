@@ -1,0 +1,27 @@
+type: object
+description: Response object for Location List API.
+properties:
+  hasNextPage:
+    type: boolean
+    description: Indicates if there are more pages of data.
+  nextPageToken:
+    type: string
+    description: Token to send in the next page request.
+  locationType:
+    type: string
+    description: Type of location being described, e.g., "CITY".
+  locationsHierarchy:
+    type: array
+    description: List of objects detailing location hierarchy.
+    items:
+      $ref: './locations-hierarchy.yaml'
+  locationIdToMetadataMap:
+    type: object
+    description: Object containing metadata for locations by ID.
+    additionalProperties:
+      $ref: './location-id-to-metadata-map.yaml'
+required:
+  - hasNextPage
+  - locationType
+  - locationsHierarchy
+  - locationIdToMetadataMap

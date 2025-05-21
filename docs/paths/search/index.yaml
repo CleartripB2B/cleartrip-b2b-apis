@@ -1,0 +1,5 @@
+search-by-hotelId:
+  $ref: './search-by-hotelId.yaml'
+
+search-by-location:
+  $ref: './search-by-location.yaml' 

@@ -1,0 +1,12 @@
+type: object
+properties:
+  baseFare:
+    type: number
+  tax:
+    type: number
+  discount:
+    type: number
+  strikeThrough:
+    type: number
+  strikeThroughInclusive:
+    type: number

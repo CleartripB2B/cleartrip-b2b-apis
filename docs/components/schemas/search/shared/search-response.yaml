@@ -1,0 +1,8 @@
+type: object
+properties:
+  searchId:
+    type: string
+  hotels:
+    type: array
+    items:
+      $ref: './hotel-ari.yaml' 

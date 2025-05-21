@@ -1,0 +1,14 @@
+type: object
+properties:
+  date:
+    type: string
+  pricingElements:
+    type: array
+    items:
+      $ref: './pricing-element-external.yaml'
+  strikeThrough:
+    type: number
+    example: 4924.80
+  strikeThroughInclusive:
+    type: number 
+    example: 5644.80

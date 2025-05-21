@@ -1,0 +1,11 @@
+type: object
+properties:
+  number:
+    type: string
+    description: GST number
+  companyName:
+    type: string
+    description: GST registered company name
+  companyAddress:
+    type: string
+    description: GST registered company address

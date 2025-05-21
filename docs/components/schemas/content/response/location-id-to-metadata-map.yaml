@@ -1,0 +1,19 @@
+type: object
+properties:
+  type:
+    type: string
+    description: Type of location, e.g., "CITY", "STATE".
+  name:
+    type: string
+    description: Name of the location.
+  coordinates:
+    $ref: './coordinates.yaml'
+  searchEnabled:
+    type: boolean
+    description: Indicates if search is enabled.
+  locationMetaData:
+    $ref: './location-metadata.yaml'
+required:
+  - type
+  - name
+  - searchEnabled

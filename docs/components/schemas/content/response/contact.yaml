@@ -1,0 +1,14 @@
+type: object
+properties:
+  contactTitle:
+    type: string
+    description: Title of the contact
+  contactEmail:
+    type: string
+    format: email
+    description: Email address of the contact
+  contactMobileNo:
+    type: array
+    items:
+      type: string
+    description: List of mobile numbers for the contact

@@ -1,0 +1,19 @@
+apis:
+  main:
+    root: ./docs/openapi.yaml
+
+output: build
+
+theme:
+  openapi:
+    showExtensions: true
+    showSecurity: true
+    showInfo: true
+    showServers: true
+    showComponents: true
+    showExternalDocs: true
+    showWebhooks: true
+    showPathParameters: true
+    showRequestBody: true
+    showResponseHeaders: true
+    showResponseExamples: true

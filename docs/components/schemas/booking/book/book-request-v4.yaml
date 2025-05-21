@@ -1,0 +1,17 @@
+type: object
+properties:
+  affiliateTripReference:
+    type: string
+    description: "Affiliate trip reference used for tracking the booking request in case of errors or no response."
+    example: "yourTripReference"
+  provisionalBookId:
+    type: string
+    description: "Provisional booking ID provided in the response of the provisional book API."
+    example: "111a8f26-ba5b-4228-a934-b6829c877426"
+  paymentDetails:
+    $ref: './payment-details.yaml'
+    description: "Details of the payment associated with the provisional booking."
+required:
+  - affiliateTripReference
+  - provisionalBookId
+  - paymentDetails

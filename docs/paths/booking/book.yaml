@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Book V4 API
+  summary: Create Hotel Booking
+  operationId: book
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-lineage-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/booking/book/book-request-v4.yaml'
+    required: true
+  responses:
+    '200':
+      description: Ok
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/booking/book/book-response-v4.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

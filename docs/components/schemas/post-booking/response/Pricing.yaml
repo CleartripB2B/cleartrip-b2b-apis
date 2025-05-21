@@ -1,0 +1,27 @@
+type: object
+description: Pricing details for the booking.
+properties:
+  roomRate:
+    type: number
+    description: Room rate for the booking.
+  hotelTaxes:
+    type: number
+    description: Hotel taxes applied.
+  discount:
+    type: number
+    description: Discount applied.
+  cashback:
+    type: number
+    description: Cashback offered.
+  totalFare:
+    type: number
+    description: Total fare
+  totalFee:
+    type: number
+    description: Total fees applicable.
+  serviceTax:
+    type: number
+    description: Service tax applicable.
+  currency:
+    type: string
+    description: Currency in which pricing is done.

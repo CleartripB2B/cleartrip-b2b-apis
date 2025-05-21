@@ -1,0 +1,9 @@
+
+type: object
+properties:
+  hotelId:
+    type: string
+    description: Unique identifier for the hotel.
+required:
+  - hotelId
+    

@@ -1,0 +1,38 @@
+/hotels/api/v4/content/locations:
+  $ref: './content/index.yaml#/location-list'
+
+/hotels/api/v4/content/location/hotels:
+  $ref: './content/index.yaml#/hotel-list'
+
+/hotels/api/v4/content/incremental-updates:
+  $ref: './content/index.yaml#/incremental-update'
+
+/hotels/api/v4/content/hotel-profile/{hotelId}:
+  $ref: './content/index.yaml#/hotel-profile'
+
+/hotels/api/v4/content/hotel-profiles:
+  $ref: './content/index.yaml#/hotel-batch-profile'
+
+/hotels/api/v4/search:
+  $ref: './search/index.yaml#/search-by-hotelId'
+
+/hotels/api/v4/search-by-location:
+  $ref: './search/index.yaml#/search-by-location'
+
+/hotels/api/v4/detail:
+  $ref: './details/index.yaml#/hotel-detail'
+
+/hotels/api/v4/provisional-book:
+  $ref: './prov-book/index.yaml#/prov-book'
+
+/hotels/api/v4/book:
+  $ref: './booking/index.yaml#/book'
+
+/hotels/api/v4/trip:
+  $ref: './post-booking/index.yaml#/get-trip'
+
+/hotels/api/v4/refund-info/{tripID}:
+  $ref: './post-booking/index.yaml#/refund-info'
+
+/hotels/api/v4/cancel/{tripID}:
+  $ref: './post-booking/index.yaml#/cancel'

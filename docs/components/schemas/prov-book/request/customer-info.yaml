@@ -1,0 +1,20 @@
+type: object
+properties:
+  contactInfo:
+    $ref: './contact-info.yaml'
+  travellers:
+    type: array
+    description: List of travellers
+    items:
+      $ref: './traveller.yaml'
+  ip:
+    type: string
+    description: IP address of the customer
+  userAgent:
+    type: string
+    description: User agent string of the customer
+required:
+  - contactInfo
+  - travellers
+  - ip
+  - userAgent

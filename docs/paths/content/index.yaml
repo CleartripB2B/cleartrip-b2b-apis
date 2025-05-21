@@ -1,0 +1,14 @@
+location-list:
+  $ref: './location-list.yaml' 
+
+hotel-list:
+  $ref: './hotel-list.yaml' 
+
+incremental-update:
+  $ref: './incremental-update.yaml' 
+
+hotel-profile:
+  $ref: './hotel-profile.yaml' 
+
+hotel-batch-profile:
+  $ref: './hotel-batch-profile.yaml' 

@@ -1,0 +1,11 @@
+type: object
+properties:
+  text:
+    type: string
+    nullable: true
+    example: "Charges for cancellations done before 12:00 AM, 28 May - INR 0.0. Charges for cancellations done after 12:00 AM, 28 May - INR 5644.8. This policy is in local time of the property."
+  cancellationPolicySlabs:
+    type: array
+    items:
+      $ref: './cancellation-policy-slab.yaml'
+    nullable: true 

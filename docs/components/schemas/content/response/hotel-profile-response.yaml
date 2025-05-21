@@ -1,0 +1,14 @@
+type: object
+properties:
+  hotelId:
+    type: string
+    description: Unique identifier for the hotel
+  hotelContent:
+    $ref: './hotelContent.yaml'
+    description: Object containing details about the hotel
+  roomsContent:
+    $ref: './roomsContent.yaml'
+    description: Object containing details about the rooms
+required:
+  - hotelId
+  - hotelContent

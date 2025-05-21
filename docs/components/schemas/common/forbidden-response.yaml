@@ -1,0 +1,5 @@
+description: Forbidden
+content:
+  application/hal+json:
+    schema:
+      $ref: './anveshak-error-response.yaml'

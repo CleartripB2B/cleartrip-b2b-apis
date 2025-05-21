@@ -1,0 +1,14 @@
+type: object
+properties:
+  bookingAmount:
+    type: number
+    format: double
+    description: Total amount on which booking will be made.
+    example: 9338.55
+  bookingCode:
+    type: string
+    description: Booking code provided in the response of details API.
+    example: bGshkVlB/NGTMY6qgQbx0OcdYWsYd/kRFi+DF19r7803/WxIDI/MHE7BQkC89Mhr
+required:
+  - bookingAmount
+  - bookingCode

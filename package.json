@@ -1,0 +1,13 @@
+{
+  "name": "cleartrip-b2b-apis",
+  "version": "1.0.0",
+  "description": "Cleartrip B2B V4 APIs Documentation",
+  "scripts": {
+    "start": "redocly preview-docs",
+    "build": "redocly build-docs",
+    "lint": "redocly lint"
+  },
+  "dependencies": {
+    "@redocly/cli": "^1.0.0"
+  }
+} 

@@ -1,0 +1,8 @@
+type: object
+properties:
+  depositAccountId:
+    type: string
+    description: "A valid deposit account ID linked with the API key."
+    example: "46889846"
+required:
+  - depositAccountId

@@ -1,0 +1,6 @@
+name: x-request-id
+in: header
+description: Unique request ID for tracking
+required: true
+schema:
+  type: string

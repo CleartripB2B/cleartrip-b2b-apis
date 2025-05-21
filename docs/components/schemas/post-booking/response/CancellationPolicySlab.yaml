@@ -1,0 +1,9 @@
+type: object
+description: Slab based cancellation policy.
+properties:
+  startTime:
+    type: integer
+    description: Start time of slab in epoch format.
+  endTime:
+    type: integer
+    description: End time of slab in epoch format.

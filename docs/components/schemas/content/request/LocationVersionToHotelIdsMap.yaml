@@ -1,0 +1,9 @@
+type: object
+description: Map of location version to list of hotel ids. Location version of each hotel will be provided in the Hotel List API.
+additionalProperties:
+  type: array
+  items:
+    type: string
+example:
+  V2:
+    - "707595"

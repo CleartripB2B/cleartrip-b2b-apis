@@ -1,0 +1,13 @@
+type: object
+properties:
+  pancardType:
+    type: string
+    enum:
+      - PERSONAL
+      - COMPANY
+    description: Type of PAN card (e.g., PERSONAL)
+    example: PERSONAL
+  panCardNumber:
+    type: string
+    description: PAN card number
+    example: BEPPY7138R

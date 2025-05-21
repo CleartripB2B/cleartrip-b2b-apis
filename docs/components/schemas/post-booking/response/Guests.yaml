@@ -1,0 +1,11 @@
+type: object
+description: Guest distribution in a room.
+properties:
+  adults:
+    type: integer
+    description: Number of adults.
+  childrenAge:
+    type: array
+    description: List of children's ages.
+    items:
+      type: string

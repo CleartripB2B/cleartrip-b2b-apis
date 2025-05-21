@@ -1,0 +1,8 @@
+type: object
+properties:
+  nightly:
+    type: array
+    items:
+      $ref: './rate-breakdown-external-element.yaml'
+  totals:
+    $ref: './total-pricing.yaml' 

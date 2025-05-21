@@ -1,0 +1,13 @@
+type: object
+properties:
+  phone:
+    type: string
+    description: Mobile number of contact person
+    example: "7607012703"
+  email:
+    type: string
+    description: Email ID of contact person
+    example: xyz@gmail.com
+required:
+  - phone
+  - email

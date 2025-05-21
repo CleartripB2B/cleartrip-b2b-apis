@@ -1,0 +1,8 @@
+type: object
+properties:
+  numberOfFloors:
+    type: integer
+    description: Number of floors in the hotel
+  numberOfRooms:
+    type: integer
+    description: Number of rooms in the hotel

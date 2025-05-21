@@ -1,0 +1,5 @@
+type: object
+description: Metadata information for the hotel request.
+properties:
+  locationVersionToHotelIdsMap:
+    $ref: './LocationVersionToHotelIdsMap.yaml'

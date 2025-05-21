@@ -1,0 +1,14 @@
+type: object
+properties:
+  numOfRoom:
+    type: integer
+    description: Number of rooms
+    example: 1
+  roomPaxList:
+    type: array
+    description: List of room pax
+    items:
+      $ref: './room-pax.yaml'
+required:
+  - numOfRoom
+  - roomPaxList

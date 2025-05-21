@@ -1,0 +1,21 @@
+type: object
+description: Hotel information.
+properties:
+  hotelId:
+    type: string
+    description: ID of the hotel.
+  name:
+    type: string
+    description: Name of the hotel.
+  address:
+    type: string
+    description: Address of the hotel.
+  city:
+    type: string
+    description: City where the hotel is located.
+  checkInDate:
+    type: string
+    description: Check-in date in YYYY-MM-DD format.
+  checkOutDate:
+    type: string
+    description: Check-out date in YYYY-MM-DD format.

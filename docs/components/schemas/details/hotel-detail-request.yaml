@@ -1,0 +1,29 @@
+type: object
+required:
+  - checkInDate
+  - checkOutDate
+  - hotelIds
+  - rooms
+  - customerInfo
+properties:
+  hotelId:
+    type: string
+  checkInDate:
+    type: string
+  checkOutDate:
+    type: string
+  ratePlanFilter:
+    type: string
+    enum: [CHEAPEST, ALL]
+  customerInfo:
+    $ref: '../search/shared/base-customer-info.yaml'
+  corpInfo:
+    $ref: '../search/shared/corp-info.yaml'
+  rooms:
+    type: array
+    items:
+      $ref: '../search/shared/room-pax.yaml'
+  rateType:
+    type: array
+    items:
+      type: string

@@ -1,0 +1,19 @@
+
+type: object
+properties:
+  hasNextPage:
+    type: boolean
+    description: Indicates if there are more pages of data.
+  nextPageToken:
+    type: string
+    description: Token used to retrieve the next page of results
+  hotels:
+    type: array
+    description: Array of hotel objects.
+    items:
+      $ref: './hotel-object.yaml'
+required:
+  - hasNextPage
+  - nextPageToken
+  - hotels
+    

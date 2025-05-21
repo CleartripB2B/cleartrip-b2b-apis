@@ -1,0 +1,38 @@
+type: object
+properties:
+  name:
+    type: string
+    description: Name of the hotel
+  description:
+    type: string
+    description: Description of the hotel
+  property:
+    $ref: './property.yaml'
+  hotelLocation:
+    $ref: './location.yaml'
+  media:
+    type: array
+    items:
+      $ref: './media.yaml'
+  amenities:
+    type: array
+    items:
+      $ref: './amenity.yaml'
+  policyInfo:
+    $ref: './policy.yaml'
+  slugId:
+    type: string
+    description: Slug ID of the hotel
+  otherInfo:
+    $ref: './otherInfo.yaml'
+  contacts:
+    type: array
+    items:
+      $ref: './contact.yaml'
+  chain:
+    $ref: './chain.yaml'
+  ratings:
+    $ref: './ratings.yaml'
+required:
+  - name
+  - hotelLocation

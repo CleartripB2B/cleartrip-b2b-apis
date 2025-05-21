@@ -1,0 +1,57 @@
+post:
+  tags:
+    - Content APIs
+  description: |
+      This Incremental Update Content API allows partners to request a list of hotels that have been updated after a specified lastUpdatedAt timestamp.
+
+      **Features:**  
+      - Retrieves hotel IDs for hotels updated after the given timestamp.  
+      - Supports pagination through a nextPageToken for fetching results in chunks.  
+      - Enables efficient incremental synchronization of hotel content.
+
+      Designed to help partners maintain up-to-date hotel content with minimal data transfer.
+
+  summary: Get Incremental Update Hotel List
+  operationId: getIncrementalUpdateHotelList
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+    - name: lastUpdatedAt
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+        description: Epoch timestamp for last updated time.
+    - in: query
+      name: pageSize
+      schema:
+        type: integer
+        minimum: 2000
+        maximum: 5000
+        default: 2000
+      description: |
+        Number of records to fetch in a page.
+      required: false
+
+    - in: query
+      name: nextPageToken
+      schema:
+        type: string
+      description: |
+        Page token received in the last page response.  
+        Mandatory only for fetching subsequent pages.
+      required: false
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/content/response/hotel-list-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

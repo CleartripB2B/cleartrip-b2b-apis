@@ -1,0 +1,11 @@
+type: object
+properties:
+  name:
+    type: string
+    description: Name of the property type
+  code:
+    type: string
+    description: Property code
+  type:
+    type: string
+    description: Type of the property

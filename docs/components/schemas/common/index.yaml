@@ -1,0 +1,11 @@
+AnveshakErrorResponse:
+  $ref: './anveshak-error-response.yaml'
+
+BaseCustomerInfo:
+  $ref: './base-customer-info.yaml'
+
+CorpInfo:
+  $ref: './corp-info.yaml'
+
+RoomPax:
+  $ref: './room-pax.yaml' 

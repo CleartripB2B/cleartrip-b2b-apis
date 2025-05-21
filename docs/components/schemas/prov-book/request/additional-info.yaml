@@ -1,0 +1,5 @@
+type: object
+properties:
+  specialRequest:
+    type: string
+    description: Special check-in request (max length 1500)

@@ -1,0 +1,9 @@
+type: object
+description: Response object for Cancel API.
+properties:
+  cancelStatus:
+    type: string
+    description: The status of the trip cancellation.
+    example: "SUCCESS"
+required:
+  - cancelStatus

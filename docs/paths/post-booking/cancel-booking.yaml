@@ -1,0 +1,32 @@
+post:
+  tags:
+    - Cancel and RefundInfo APIs
+  description: |
+    **Purpose**: Cancel a trip.
+
+    The Cancel API allows clients to cancel a trip based on a provided tripID.
+  summary: Cancel Booking
+  operationId: cancelBooking
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+    - name: tripID
+      in: path
+      description: The unique identifier associated with the trip to be canceled.
+      required: true
+      schema:
+        type: string
+        example: "234567890"
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/post-booking/response/cancel-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

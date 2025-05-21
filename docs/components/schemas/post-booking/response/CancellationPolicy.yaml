@@ -1,0 +1,10 @@
+type: object
+description: Cancellation policy for the booking.
+properties:
+  text:
+    type: string
+    description: Cancellation policy description text.
+  cancellationPolicySlabs:
+    type: array
+    items:
+      $ref: './CancellationPolicySlab.yaml'

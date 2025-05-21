@@ -1,0 +1,6 @@
+name: x-lineage-id
+in: header
+description: Unique lineage ID for tracking
+required: true
+schema:
+  type: string

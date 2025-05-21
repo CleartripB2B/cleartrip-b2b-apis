@@ -1,0 +1,4 @@
+type: object
+properties:
+  gstAssured:
+    type: boolean 

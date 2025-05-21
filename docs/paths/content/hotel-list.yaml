@@ -1,0 +1,73 @@
+post:
+  tags:
+    - Content APIs
+  description: |
+      This API retrieves a list of hotels for a specified location based on the provided location ID and location type.
+
+      **Features:**  
+      - Fetches hotel information for a specific location.  
+      - Supports pagination for efficient retrieval of large hotel lists.  
+      - Ensures scalable and optimized data access.
+
+      This allows users to seamlessly obtain hotel details for dynamic location-based searches.
+
+  summary: Get Hotel List
+  operationId: getHotelList
+  parameters:
+    - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
+    - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
+    - name: x-meta-data
+      in: header
+      required: true
+      schema:
+        type: string
+        example: '{"locationVersion":"V2"}'
+
+    - in: query
+      name: locationType
+      schema:
+        type: string
+        enum: ["CITY", "STATE", "LOCALITY"]
+        default: "CITY"
+      required: false
+    
+    - in: query
+      name: locationId
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: Unique Id for the location
+    - in: query
+      name: pageSize
+      schema:
+        type: integer
+        minimum: 2000
+        maximum: 5000
+        default: 2000
+      description: |
+        Number of records to fetch in a page.
+      required: false
+
+    - in: query
+      name: nextPageToken
+      schema:
+        type: string
+      description: |
+        Page token received in the last page response.  
+        Mandatory only for fetching subsequent pages.
+      required: false
+
+  responses:
+    '200':
+      description: OK
+      content:
+        application/hal+json:
+          schema:
+            $ref: '../../components/schemas/content/response/hotel-list-response.yaml'
+    '400':
+      $ref: '../../components/schemas/common/bad-request-response.yaml'
+    '403':
+      $ref: '../../components/schemas/common/forbidden-response.yaml'
+    '500':
+      $ref: '../../components/schemas/common/internal-server-error-response.yaml'

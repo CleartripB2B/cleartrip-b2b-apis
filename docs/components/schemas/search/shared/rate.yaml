@@ -1,0 +1,29 @@
+type: object
+properties:
+  rateId:
+    type: string
+    example: "290502178"
+  rateName:
+    type: string
+    example: "Room Only"
+  bookingCode:
+    type: string
+    example: "bJ8N7BpDLQ33HpMrOc/xdcM5Gz6D9FQioKT/ua/qQjf54fiHWbNYocSquGrVI7AI"
+  freeCancellation:
+    type: boolean
+  freeBreakfast:
+    type: boolean
+  cancellationPolicy:
+    $ref: './cancellation-policy.yaml'
+  bedTypes:
+    type: array
+    items:
+      type: string
+  inclusions:
+    type: array
+    items:
+      type: string
+  pricing:
+    $ref: './pricing.yaml'
+  gstInfo:
+    $ref: './gst-info.yaml' 

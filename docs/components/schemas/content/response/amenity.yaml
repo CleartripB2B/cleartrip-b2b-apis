@@ -1,0 +1,13 @@
+type: object
+properties:
+  name:
+    type: string
+    description: Name of the amenity
+  category:
+    type: string
+    description: Category of the amenity
+  standardAmenityName:
+    type: string
+    description: Standardized name of the amenity
+required:
+  - name

@@ -1,0 +1,2 @@
+hotel-detail:
+  $ref: './hotel-detail.yaml'

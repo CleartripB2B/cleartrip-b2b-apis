@@ -1,0 +1,22 @@
+type: object
+description: Response object for Trip Detail API.
+properties:
+  tripId:
+    type: string
+    description: Trip ID associated with the booking.
+  contactDetail:
+    $ref: './ContactDetail.yaml'
+  paymentDetail:
+    $ref: './PaymentDetail.yaml'
+  hotelDetail:
+    $ref: './HotelDetail.yaml'
+  pricing:
+    $ref: './Pricing.yaml'
+  bookingInfo:
+    $ref: './BookingInfo.yaml'
+  rooms:
+    type: array
+    items:
+      $ref: './RoomDetail.yaml'
+  cancellationPolicy:
+    $ref: './CancellationPolicy.yaml'

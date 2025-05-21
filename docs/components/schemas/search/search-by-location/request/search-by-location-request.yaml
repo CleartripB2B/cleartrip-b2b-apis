@@ -1,0 +1,30 @@
+type: object
+required:
+  - checkInDate
+  - checkOutDate
+  - location
+  - rooms
+  - customerInfo
+properties:
+  location:
+    $ref: '../../shared/location.yaml'
+  checkInDate:
+    type: string
+  checkOutDate:
+    type: string
+  ratePlanFilter:
+    type: string
+    enum: [CHEAPEST, ALL]
+  customerInfo:
+    $ref: '../../shared/base-customer-info.yaml'
+  corpInfo:
+    $ref: '../../shared/corp-info.yaml'
+  rooms:
+    type: array
+    items:
+      $ref: '../../shared/room-pax.yaml'
+  rateType:
+    type: array
+    items:
+      type: string
+      enum: [SPECIFIC_CORPORATE, GENERIC_CORPORATE, THIRD_PARTY, UNRECOGNIZED]

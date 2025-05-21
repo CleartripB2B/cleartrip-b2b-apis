@@ -1,0 +1,5 @@
+type: object
+properties:
+  locationVersion:
+    type: string
+    description: Version of the location metadata.
