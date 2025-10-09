@@ -26,4 +26,22 @@ properties:
   pricing:
     $ref: './pricing.yaml'
   gstInfo:
-    $ref: './gst-info.yaml' 
+    $ref: './gst-info.yaml'
+  additionalCharges:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Tourism Dirham Fee"
+        value:
+          type: number
+          example: 10.0
+        currency:
+          type: string
+          example: "AED"
+        frequency:
+          type: string
+        description:
+          type: string 
