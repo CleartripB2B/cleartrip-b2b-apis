@@ -3,4 +3,4 @@ properties:
   searchId:
     type: string
   hotel:
-    $ref: '../search/shared/hotel-ari.yaml' 
+    $ref: './hotel-ari.yaml' 
