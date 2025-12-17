@@ -27,7 +27,7 @@ get:
     '200':
       description: OK
       content:
-        application/hal+json:
+        application/json:
           schema:
             $ref: '../../components/schemas/content/response/hotel-profile-response.yaml'
     '400':

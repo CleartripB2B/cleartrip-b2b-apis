@@ -1,0 +1,15 @@
+type: object
+properties:
+  hotelId:
+    type: string
+    description: Unique identifier for a hotel.
+    example: "4265571"
+  isDnd:
+    type: boolean
+    description: is Do Not Discount Hotel
+  rooms:
+    type: array
+    description: List of available rooms
+    items:
+      $ref: './room.yaml'
+

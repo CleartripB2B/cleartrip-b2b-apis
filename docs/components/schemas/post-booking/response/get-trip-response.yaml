@@ -20,7 +20,6 @@ properties:
       $ref: './RoomDetail.yaml'
   cancellationPolicy:
     $ref: './CancellationPolicy.yaml'
-
   panCardNumber:
     type: string
     description: PAN card number associated with the booking.

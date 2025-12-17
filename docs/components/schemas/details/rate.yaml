@@ -1,0 +1,48 @@
+type: object
+properties:
+  rateId:
+    type: string
+    example: "290502178"
+  rateName:
+    type: string
+    example: "Room Only"
+  bookingCode:
+    type: string
+    example: "bJ8N7BpDLQ33HpMrOc/xdcM5Gz6D9FQioKT/ua/qQjf54fiHWbNYocSquGrVI7AI"
+  freeCancellation:
+    type: boolean
+  freeBreakfast:
+    type: boolean
+  cancellationPolicy:
+    $ref: '../search/shared/cancellation-policy.yaml'
+  bedTypes:
+    type: array
+    items:
+      type: string
+  inclusions:
+    type: array
+    items:
+      type: string
+  pricing:
+    $ref: '../search/shared/pricing.yaml'
+  gstInfo:
+    $ref: '../search/shared/gst-info.yaml'
+  additionalCharges:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Tourism Dirham Fee"
+        value:
+          type: number
+          example: 10.0
+        currency:
+          type: string
+          example: "AED"
+        frequency:
+          type: string
+        description:
+          type: string
+
