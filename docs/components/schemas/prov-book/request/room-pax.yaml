@@ -11,7 +11,7 @@ properties:
     items:
       type: integer
       minimum: 0
-      maximum: 11
+      maximum: 17
     example: [5,6]
 required:
   - adults
