@@ -3,6 +3,10 @@ get:
     - Trip API
   summary: Get Trip
   operationId: getTrip
+  description: |
+    Fetches the details of a trip.
+
+    **Note:** A new field, `reconfirmation`, has been introduced in the response to provide booking reconfirmation details.
   parameters:
     - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
     - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'

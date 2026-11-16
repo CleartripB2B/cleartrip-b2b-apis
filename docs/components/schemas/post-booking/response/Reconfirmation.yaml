@@ -1,0 +1,25 @@
+type: object
+description: Booking reconfirmation details.
+properties:
+  status:
+    type: string
+    description: Reconfirmation status of the booking.
+  hcn:
+    type: string
+    description: Hotel confirmation number.
+  hotelierName:
+    type: string
+    description: Name of the hotelier who reconfirmed the booking.
+  designation:
+    type: string
+    description: Designation of the hotelier.
+  hotelContactNumber:
+    type: string
+    description: Contact number of the hotel.
+  hotelRemarks:
+    type: string
+    description: Remarks shared by the hotel during reconfirmation.
+  reconfirmedAt:
+    type: string
+    format: date-time
+    description: Reconfirmation timestamp in ISO 8601 (UTC) format.
