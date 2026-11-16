@@ -14,6 +14,11 @@ properties:
     $ref: './Pricing.yaml'
   bookingInfo:
     $ref: './BookingInfo.yaml'
+  reconfirmation:
+    description: Booking reconfirmation details. Null by default, which means the trip is not reconfirmed yet.
+    nullable: true
+    allOf:
+      - $ref: './Reconfirmation.yaml'
   rooms:
     type: array
     items:
