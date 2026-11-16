@@ -6,7 +6,7 @@ get:
   description: |
     Fetches the details of a trip.
 
-    **Note:** A new field, `reconfirmation`, has been introduced in the response to provide booking reconfirmation details.
+    **Note:** A new field, `reconfirmation`, has been introduced in the response to provide booking reconfirmation details. By default, `reconfirmation` is `null`, which means the trip is not reconfirmed yet.
   parameters:
     - $ref: '../../components/schemas/parameters/x-api-key-header.yaml'
     - $ref: '../../components/schemas/parameters/x-tracking-id-header.yaml'
